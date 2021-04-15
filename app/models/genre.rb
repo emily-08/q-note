@@ -1,5 +1,5 @@
 class Genre < ApplicationRecord
-  def new
-    @genre = Genre.new
-  end
+  belongs_to :user
+
+  validates :name, presence: true
 end
