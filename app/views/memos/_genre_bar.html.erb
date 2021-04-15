@@ -6,10 +6,10 @@
 </div>
 
 <div class="geres-lists">
-  <% @genre.each do |genre| %>
+  <% current_user.genres.each do |genre| %>
     <div class="genre-list-name">
       <div class="genre-name">
-        <a href="#"><%= genre.name %></a>
+        <%= link_to genre.name, genre_memos_path(genre) %>
       </div>
     </div>
   <% end %>

@@ -12,46 +12,17 @@
 </div>
 
 <div class="memos-space">
-  <div class="memo-list">
-    <div class="upper-memo">
-      <div class="memo-title">
-        エラー文の読みとき
-      </div>
-      <div class="memo-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="lower-memo">
-      <div class="memo-text">
-        syntaxエラー
-      </div>
-    </div>
-  </div>
-
-  <div class="memo-list">
-    <div class="upper-memo">
-      <div class="memo-title">
-        MVC
-      </div>
-      <div class="memo-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="lower-memo">
-      <div class="memo-text">
-        モデル、ビュー、コントローラー
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'memo', collection: @memos %>
 </div>
 
-<div class="form">
+<%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <input class="form-memo" placeholder= "type a memo">
+    <%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %>
+    <p><%= f.text_field :text, class: 'form-text', placeholder: 'type a text' %></p>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
