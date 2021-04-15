@@ -1,19 +1,16 @@
 <div class="genre-header">
   <div class="header-genre-name">ジャンル</div>
   <div class="create-genre">
-    <a href="#">作成する</a>
+    <%= link_to "作成", new_genre_path %>
   </div>
 </div>
 
 <div class="geres-lists">
-  <div class="genre-list">
-    <div class="genre-name">
-      <a href="#">HTML/CSS</a>
+  <% @genre.each do |genre| %>
+    <div class="genre-list-name">
+      <div class="genre-name">
+        <a href="#"><%= genre.name %></a>
+      </div>
     </div>
-  </div>
-  <div class="genre-list">
-    <div class="genre-name">
-      <a href="#">Ruby</a>
-    </div>
-  </div>
+  <% end %>
 </div>
