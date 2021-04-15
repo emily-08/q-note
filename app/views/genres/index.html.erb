@@ -2,4 +2,10 @@
   <div class='genre'>
     <%= render "memos/genre_bar" %>
   </div>
+  <%# 全てのメモ一覧 %>
+  <div class="memo">
+    <% @memos.each do |memo| %>
+        <%= render partial: 'memos/memo', collection: @memos %>
+    <% end %>
+  </div>
 </div>
