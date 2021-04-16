@@ -1,17 +1,21 @@
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
 <div class="genre-header">
-  <%# <div class="header-genre-name">ジャンル</div> %>
   <div class="create-genre">
     <%= link_to "ジャンル作成", new_genre_path %>
   </div>
 </div>
+<%# <div class="right-header">
+  <div class="header-button">
+    
+  </div>
+</div> %>
 
 <div class="geres-lists">
   <% current_user.genres.each do |genre| %>
     <div class="genre-list-name">
       <div class="genre-name">
-        <%= link_to genre.name, genre_memos_path(genre) %>
+        <%= link_to genre.name, genre_memos_path(genre) %>___<a href="#">削除</a>
       </div>
     </div>
   <% end %>
 </div>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>

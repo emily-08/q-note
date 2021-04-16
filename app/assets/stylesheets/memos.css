@@ -3,15 +3,16 @@
 }
 
 .genre {
-  background-color: #253141;
+  background-color: #EEE8AA;
   width: 300px;
   height: 100vh;
+  border: black solid 3px;
 }
 
 .genre-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: #EEE8AA;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,20 +20,20 @@
 
 .header-genre-name{
   font-size: 16px;
-  color: #FAFAFA;
+  color: black;
   text-decoration: none;
 }
 
 .create-genre a {
   font-size: 10px;
-  border: 1px solid lightblue;
+  border: 1px solid black;
   padding: 14px;
-  color: deepskyblue;
+  color: black;
   text-decoration: none;
 }
 
 .geres-lists {
-  background-color: #2F3E51;
+  background-color: #EEE8AA;
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
@@ -44,30 +45,22 @@
 
 .genre-name a {
   text-decoration: none;
-  color: white;
+  color:black;
 }
 
 .memo {
-  background-color: #FFFFFF;
+  background-color: #EEE8AA;
   width: calc(100vw - 300px);
+  height: 100vh;
 }
 
-.memo-header {
-  height: 100px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-}
 
-.header-title {
+/* .header-title {
   color: #333;
   font-size: 24px;
   margin-top: 36px;
-}
+} */
 
-.header-button {
-  margin-top: 40px;
-}
 
 .header-button a {
   text-decoration: none;
@@ -77,8 +70,8 @@
 }
 
 .memos-space {
-  background-color: #FAFAFA;
-  height: calc(100vh - 100px);
+  background-color: #EEE8AA;
+  height: 100vh;
   overflow: scroll;
   display: flex;
   justify-content: space-between;
@@ -118,7 +111,7 @@
   height: 100%;
   padding: 20px 40px;
   display: flex;
-  width: calc(100vw - 300px - 30%);
+  width: calc(100vw - 300px - 50%);
   display: block;
 }
 
@@ -140,7 +133,7 @@
 
 .form-text {
   border: none;
-  height: 430px;
+  height: 500px;
   overflow: scroll;
   width: 100%;
   padding-left: 10px;
@@ -172,4 +165,29 @@
 
 .hidden {
   display: none;
+}
+
+.genre-box {
+  position: relative;
+  margin: 2em 0;
+  padding: 2.9em 18.0em 30em 0;
+  border: solid 3px #62c1ce;
+}
+.genre-box .genre-label {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #62c1ce;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+.box {
+  margin: 0; 
+  padding: 0;
 }

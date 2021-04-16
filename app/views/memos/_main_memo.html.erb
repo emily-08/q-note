@@ -1,16 +1,3 @@
-<div class="memo-header">
-  <div class="left-header">
-    <div class="header-title">
-      <%= @genre.name %>
-    </div>
-  </div>
-  <div class="right-header">
-    <div class="header-button">
-      <a href="#">このジャンルのメモを終了する</a>
-    </div>
-  </div>
-</div>
-
 <div class="memos-space">
   <%= render partial: 'memo', collection: @memos %>
   <%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
@@ -18,10 +5,10 @@
       <p><%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %></p>
       <p><%= f.text_area :text, class: 'form-text', placeholder: 'type a text' %></p>
     </div>
-    <label class="form-image">
+     <label class="form-image">
         <span class="image-file">画像</span>
-        <%= f.file_field :image, class: 'hidden' %>
-    </label>
-    <%= f.submit '保存', class: 'form-submit' %>
+         <%= f.file_field :image, class: 'hidden' %>
+     </label>
+      <%= f.submit '保存', class: 'form-submit' %>
   <% end %>
 </div>
