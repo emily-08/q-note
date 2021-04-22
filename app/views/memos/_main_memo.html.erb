@@ -1,5 +1,11 @@
 <div class="memos-space">
-  <%= render partial: 'memo', collection: @memos %>
+  <%# ジャンルのメモ一覧 %>
+  <div class="genre-box">
+    <span class="genre-label" ><%= @genre.name %></span>
+    <%= render partial: 'memo', collection: @memos %>
+  </div>
+  <%# ジャンルのメモ一覧 %>
+  <%# メモの投稿 %>
   <%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
     <div class="form-input">
       <p><%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %></p>
@@ -7,8 +13,9 @@
     </div>
      <label class="form-image">
         <span class="image-file">画像</span>
-         <%= f.file_field :image, class: 'hidden' %>
+        <%= f.file_field :image, class: 'hidden' %>
      </label>
       <%= f.submit '保存', class: 'form-submit' %>
   <% end %>
+  <%#// メモの投稿 %>
 </div>

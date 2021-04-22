@@ -4,8 +4,11 @@
   </div>
   <%# 全てのメモ一覧 %>
   <div class="memo">
-    <% @memos.each do |memo| %>
-        <%= render partial: 'memos/memo', collection: @memos %>
-    <% end %>
+    <%# <% @memos.each do |memo| %>
+    <%# 未 genreのname追加 %>
+    <%= render partial: 'memos/memo', collection: @memos %>
+      <%# <%= memo.title %>
+      <%# <%= memo.created_at %>
+    <%# <% end %>
   </div>
 </div>

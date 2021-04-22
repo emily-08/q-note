@@ -2,7 +2,7 @@ class GenresController < ApplicationController
 
   def index
     @genre = Genre.all
-    @memos = Memo.all
+    @memos = Memo.order("created_at DESC")
   end
 
   def new

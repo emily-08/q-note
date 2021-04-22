@@ -1,18 +1,21 @@
+html { background-color: rgba(247, 227, 141, 0.836); }
+
 .wrapper {
   display: flex;
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* background-color: rgba(247, 227, 141, 0.836); */
 }
 
 .genre {
-  background-color: #EEE8AA;
   width: 300px;
-  height: 100vh;
-  border: black solid 3px;
+  background-color: #fad884bd;
+  min-height: 100vh;
 }
 
 .genre-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #EEE8AA;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,8 +36,7 @@
 }
 
 .geres-lists {
-  background-color: #EEE8AA;
-  height: calc(100vh - 100px);
+  /* height: calc(100vh - 100px); */
   padding: 0 20px;
   overflow: scroll;
 }
@@ -49,9 +51,9 @@
 }
 
 .memo {
-  background-color: #EEE8AA;
   width: calc(100vw - 300px);
-  height: 100vh;
+  /* height: 100%; */
+  /* min-height: 100vh; */
 }
 
 
@@ -70,8 +72,8 @@
 }
 
 .memos-space {
-  background-color: #EEE8AA;
-  height: 100vh;
+  /* background-color: #EEE8AA; */
+  /* height: 100vh; */
   overflow: scroll;
   display: flex;
   justify-content: space-between;
@@ -81,19 +83,23 @@
   margin: 10px 0 0 0;
 }
 
-.upper-memo{
+.upper-memo {
   display: flex;
+  /* margin: auto; */
+  display: inline-block;
 }
 
 .memo-title {
   color: #434a54;
   font-size: 16px;
+  display: inline-block;
 }
 
 .memo-date {
   color: #999;
   font-size: 12px;
   padding-left: 10px;
+  display: inline-block;
 }
 
 .lower-memo {
@@ -108,7 +114,8 @@
 
 .form {
   background-color: #FFFACD;
-  height: 100%;
+  /* height: 100%; */
+  min-height: 100vh;
   padding: 20px 40px;
   display: flex;
   width: calc(100vw - 300px - 50%);
@@ -173,6 +180,7 @@
   padding: 2.9em 18.0em 30em 0;
   border: solid 3px #62c1ce;
 }
+
 .genre-box .genre-label {
   position: absolute;
   display: inline-block;
@@ -187,6 +195,7 @@
   font-weight: bold;
   border-radius: 5px 5px 0 0;
 }
+
 .box {
   margin: 0; 
   padding: 0;
