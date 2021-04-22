@@ -6,7 +6,10 @@
   <div class="memo">
     <%# <% @memos.each do |memo| %>
     <%# 未 genreのname追加 %>
-    <%= render partial: 'memos/memo', collection: @memos %>
+    <div class="genre-box">
+      <span class="genre-label" >メモ一覧</span>
+      <%= render partial: 'memos/memo', collection: @memos %>
+    </div>
       <%# <%= memo.title %>
       <%# <%= memo.created_at %>
     <%# <% end %>
