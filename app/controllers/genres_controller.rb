@@ -24,6 +24,19 @@ class GenresController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    @genre = Genre.find(params[:id])
+  end
+
+  def update
+    genre = Genre.find(params[:id])
+    if genre.update(genre_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def genre_params

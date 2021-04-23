@@ -14,8 +14,11 @@
   <% current_user.genres.each do |genre| %>
     <div class="genre-list-name">
       <div class="genre-name">
-        <%= link_to genre.name, genre_memos_path(genre) %>___<%= link_to '削除', genre_path(genre.id), method: :delete %>
+        <p><%= link_to genre.name, genre_memos_path(genre) %></p>
+        …<%= link_to '削除', genre_path(genre.id), method: :delete %>
+        …<%= link_to '編集', edit_genre_path(genre.id), method: :get %>
       </div>
     </div>
   <% end %>
 </div>
+<%= link_to "topページに戻る", root_path %>
