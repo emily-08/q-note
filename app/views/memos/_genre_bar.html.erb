@@ -14,7 +14,7 @@
   <% current_user.genres.each do |genre| %>
     <div class="genre-list-name">
       <div class="genre-name">
-        <%= link_to genre.name, genre_memos_path(genre) %>___<a href="#">削除</a>
+        <%= link_to genre.name, genre_memos_path(genre) %>___<%= link_to '削除', genre_path(genre.id), method: :delete %>
       </div>
     </div>
   <% end %>
