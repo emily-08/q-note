@@ -36,6 +36,10 @@ class MemosController < ApplicationController
     end
   end
 
+  def show
+    @memo = Memo.find(params[:id])
+  end
+
   private
 
   def memo_params
