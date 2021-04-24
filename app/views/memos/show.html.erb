@@ -4,5 +4,8 @@
     <div>
       <%= @memo.text%>
     </div>
+    <div>
+      <%= image_tag @memo.image.variant(resize: '500x500'), class: 'memo-image' if @memo.image.attached? %>
+    </div>
   </div>
 </div>
