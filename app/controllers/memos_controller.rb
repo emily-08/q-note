@@ -22,6 +22,20 @@ class MemosController < ApplicationController
     redirect_to genre_memos_path
   end
 
+  def edit
+    @memo = Memo.find(params[:id])
+    @genre = Genre.find(params[:genre_id])
+  end
+
+  def update
+    @memo = Memo.find(params[:id])
+    if @memo.update(memo_params)
+      redirect_to action: :index
+    else
+      render :edit
+    end
+  end
+
   private
 
   def memo_params

@@ -1,0 +1,27 @@
+<div class="memos-space">
+  <%# ジャンルのメモ一覧ページ %>
+  <%# <div class="genre-box"> %>
+    <span class="genre-label" ><%= @genre.name %></span>
+    <%# <%= render partial: 'memo', collection: @memos %>
+    <div class="memo-list">
+      <div class="upper-memo">
+        <p class="memo-title"><%= @memo.title %><%= @memo.created_at%><p>
+      </div>
+    </div>
+  <%# </div> %>
+  <%# ジャンルのメモ一覧ページ %>
+  <%# メモの投稿 %>
+  <%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
+    <div class="form-input">
+    <h3>編集</h3>
+      <p><%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %></p>
+      <p><%= f.text_area :text, class: 'form-text', placeholder: 'type a text' %></p>
+    </div>
+     <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+     </label>
+      <%= f.submit '保存', class: 'form-submit' %>
+  <% end %>
+  <%#// メモの投稿 %>
+</div>
