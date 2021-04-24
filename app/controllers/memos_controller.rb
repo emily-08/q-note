@@ -40,6 +40,10 @@ class MemosController < ApplicationController
     @memo = Memo.find(params[:id])
   end
 
+  def search
+    @memos = Memo.search(params[:keyword])
+  end
+
   private
 
   def memo_params

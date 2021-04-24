@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'memos/index'
   root to: "genres#index"
   resources :genres do
-    resources :memos
+    resources :memos do
+      collection do
+        get 'search'
+      end
+    end
   end
 end
