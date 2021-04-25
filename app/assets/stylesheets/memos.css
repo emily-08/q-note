@@ -41,13 +41,31 @@ html { background-color: rgba(247, 227, 141, 0.836); }
   overflow: scroll;
 }
 
-.genre-list {
-  padding: 20px 0 40px;
+.genre-list-name {
+  margin: 20px 0 40px;
+  border: #62c1ce 2.5px solid;
+  padding: 0 10px;
+  /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(98, 193, 206) 50%); */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(141, 207, 185) 50%);
+  background-position: 0 0;
+  background-size: 200% auto;
+  transition: .3s;
+}
+
+.genre-list-name:hover{
+  background-position: -100% 0;
+  color: #fff;
 }
 
 .genre-name a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color:black;
+  padding: 0 10px;
+}
+
+.genre-name a:hover{
+  background-position: -100% 0;
+  color: #fff;
 }
 
 .memo {
