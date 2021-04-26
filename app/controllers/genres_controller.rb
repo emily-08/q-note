@@ -7,6 +7,8 @@ class GenresController < ApplicationController
 
   def new
     @genre = Genre.new
+    @memo = Memo.new
+    @memos = Memo.order("created_at DESC")
   end
 
   def create
