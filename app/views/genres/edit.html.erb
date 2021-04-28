@@ -1,21 +1,55 @@
-<h3>編集する</h3>
-<div class='chat-room-form'>
-  <%= form_with(model: @genre, local: true) do |f| %>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <%= f.label :ジャンル名, class: 'chat-room-form__label'%>
+<div class='wrapper'>
+  <div class='genre'>
+    <div class="genre-new">
+      <div class="create-genre">
+        <%= link_to "キャンセル", root_path %>
       </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+      <div class='chat-room-form'>
+        <%= form_with(model: @genre, local: true) do |f| %>
+          <div class='chat-room-form__field'>
+            <div class='chat-room-form__field--left'>
+              <%= f.label :ジャンル名の編集, class: 'chat-room-form__label'%>
+            </div>
+            <div class='chat-room-form__field--right'>
+              <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+            </div>
+          </div>
+          <div class='chat-room-form__field'>
+          </div>
+          <div class='chat-room-form__field'>
+            <div class='chat-room-form__field--left'></div>
+            <div class='chat-room-form__field--right'>
+              <%= f.submit value="変更", class: 'chat-room-form__action-btn'%>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-    <div class='chat-room-form__field'>
+    <div class="geres-lists">
+      <% current_user.genres.each do |genre| %>
+        <div class="genre-list-name">
+          <div class="genre-name">
+            <p><%= link_to genre.name, genre_memos_path(genre) %></p>
+            …<%= link_to '削除', genre_path(genre.id), method: :delete %>
+            …<%= link_to '編集', edit_genre_path(genre.id), method: :get %>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'></div>
-      <div class='chat-room-form__field--right'>
-        <%= f.submit class: 'chat-room-form__action-btn'%>
+    <%= link_to "topページに戻る", root_path %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+  </div>
+  <%# 全てのメモ一覧 %>
+  <div class="memo">
+    <div class="genre-box">
+      <span class="genre-label" >メモ一覧</span>
+      <div class="memo-list">
+        <div class="upper-memo">
+        <% @memos.each do |memo| %>
+          <p class="memo-title"><%= memo.title %><%= memo.created_at%><p>
+        <% end %>
+        </div>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>

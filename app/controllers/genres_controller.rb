@@ -27,6 +27,7 @@ class GenresController < ApplicationController
   end
 
   def edit
+    @memos = Memo.order("created_at DESC")
     @genre = Genre.find(params[:id])
   end
 
