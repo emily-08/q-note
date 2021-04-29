@@ -4,6 +4,12 @@
   </div>
   <%# 全てのメモ一覧 %>
   <div class="memo">
+    <div>
+      <%= form_with(url: search_genre_memos_path(@memos), local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+    </div>
     <%# <% @memos.each do |memo| %>
     <%# 未 genreのname追加 %>
     <div class="genre-box">
