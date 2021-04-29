@@ -5,7 +5,7 @@
     <%# <%= render partial: 'memo', collection: @memos %>
     <div class="memo-list">
       <div class="upper-memo">
-        <p class="memo-title"><%= @memo.title %><%= @memo.created_at%><p>
+        <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
       </div>
     </div>
   <%# </div> %>

@@ -12,7 +12,7 @@
     <div class="genre-box">
       <span class="genre-label" >検索メモ一覧</span>
       <% @memos.each do |memo| %>
-        <p class="memo-title"><%= memo.title %><%= memo.created_at%><p>
+        <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
       <% end %>
     </div>
   </div>

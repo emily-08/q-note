@@ -35,7 +35,7 @@
       <div class="memo-list">
         <div class="upper-memo">
         <% @memos.each do |memo| %>
-          <p class="memo-title"><%= memo.title %><%= memo.created_at%><p>
+          <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
         <% end %>
         </div>
       </div>
