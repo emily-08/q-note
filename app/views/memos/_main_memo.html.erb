@@ -1,10 +1,10 @@
+<div>
+  <%= form_with(url: search_genre_memos_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "メモを検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>
 <div class="memos-space">
-  <div>
-    <%= form_with(url: search_genre_memos_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "メモを検索する", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
-    <% end %>
-  </div>
   <%# ジャンルのメモ一覧 %>
   <div class="genre-box">
     <span class="genre-label" ><%= @genre.name %></span>
