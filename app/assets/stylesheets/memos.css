@@ -57,21 +57,6 @@ html { background-color: rgba(247, 227, 141, 0.836); }
   /* min-height: 100vh; */
 }
 
-
-/* .header-title {
-  color: #333;
-  font-size: 24px;
-  margin-top: 36px;
-} */
-
-
-.header-button a {
-  text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 20px;
-}
-
 .memos-space {
   /* background-color: #EEE8AA; */
   /* height: 100vh; */
