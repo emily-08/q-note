@@ -10,14 +10,16 @@
         <%= form.submit "検索", class: "search-btn" %>
       <% end %>
     </div>
-    <%# <% @memos.each do |memo| %>
-    <%# 未 genreのname追加 %>
     <div class="genre-box">
       <span class="genre-label" >メモ一覧</span>
-      <%= render partial: 'memos/memo', collection: @memos %>
+      <div class="memo-list">
+        <div class="upper-memo">
+          <% @memos.each do |memo| %>
+            <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
+            <%= link_to '詳細', genre_memo_path(@genre, memo.id), method: :get %>
+          <% end %>
+        </div>
+      </div>
     </div>
-      <%# <%= memo.title %>
-      <%# <%= memo.created_at %>
-    <%# <% end %>
   </div>
 </div>
