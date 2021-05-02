@@ -43,11 +43,10 @@ li {
 
 .create-genre a {
   font-size: 15px;
-  border: 1px dashed black;
   padding: 14px;
-  color: black;
+  color: #fff;
   text-decoration: none;
-  background-color: #78bec7;
+  background-color: rgb(168, 165, 165);
 }
 
 .chat-room-form {
@@ -88,7 +87,7 @@ li {
   display: inline-block;
   padding: 12px 20px;
   color: #fff;
-  background-color: #78bec7;
+  background-color: rgb(168, 165, 165);
   border: 0;
   width: 180px;
   margin: 0 30px 0 30px ;

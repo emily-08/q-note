@@ -1,4 +1,4 @@
-/* html { background-color: rgba(247, 227, 141, 0.836); } */
+html { background-color: #fad884b2; }
 
 .wrapper {
   display: flex;
@@ -9,15 +9,8 @@
 
 .genre {
   width: 300px;
-  background-color: #fad884bd;
-  /* background-color: #fffaf0; */
+  background-color: #fad884b2;
   min-height: 100vh;
-}
-
-.header-genre-name{
-  font-size: 16px;
-  color: black;
-  text-decoration: none;
 }
 
 .geres-lists {
@@ -28,9 +21,9 @@
 
 .genre-list-name {
   margin: 20px 0 40px;
-  border: #62c1ce 2.5px solid;
+  border: gray 2.5px solid;
   padding: 0 10px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(141, 207, 185) 50%);
+  /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(141, 207, 185) 50%); */
   background-position: 0 0;
   background-size: 200% auto;
   transition: .3s;
