@@ -73,6 +73,7 @@ li {
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
+  color: rgb(107, 106, 106);
 }
 .chat-room-form__input {
   float: left;
@@ -116,4 +117,36 @@ li {
 
 .icon {
   margin: 20px;
+}
+
+.plus {
+  text-align: center;
+}
+
+
+.geres-lists {
+  /* height: calc(100vh - 100px); */
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.genre-list-name {
+  margin: 20px 0;
+  border: gray 2.5px solid;
+  padding: 3px 10px;
+}
+
+.genre-list-name:hover{
+  color: #fff;
+}
+
+.genre-name a {
+  text-decoration: none;
+  color:black;
+  padding: 0 10px;
+}
+
+.genre-name a:hover{
+  background-position: -100% 0;
+  color: #fff;
 }

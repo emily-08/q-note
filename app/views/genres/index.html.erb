@@ -15,8 +15,7 @@
       <div class="memo-list">
         <div class="upper-memo">
           <% @memos.each do |memo| %>
-            <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
-            <%= link_to '詳細', genre_memo_path(@genre, memo.id), method: :get %>
+            <p class="memo-title"><%= memo.title %><%= l memo.created_at%><%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(@genre, memo.id), method: :get %><p>
           <% end %>
         </div>
       </div>
