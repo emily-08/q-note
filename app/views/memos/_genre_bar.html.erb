@@ -1,9 +1,14 @@
-<div class="genre-header">
-  <div class="create-genre">
-    <%= link_to "ジャンルを作成", new_genre_path %>
-  </div>
-</div>
+<%# <div class="genre-header"> %>
+  <%# <div class="create-genre"> %>
+    <%# <%= link_to "ジャンルを作成", new_genre_path %>
+  <%# </div> %>
+<%# </div> %>
 <div class="geres-lists">
+  <div class="genre-list-name">
+    <div class="genre-name">
+      <p><%= link_to "ジャンルを作成", new_genre_path %></p>
+    </div>
+  </div>
   <% current_user.genres.each do |genre| %>
     <div class="genre-list-name">
       <div class="genre-name">
@@ -14,5 +19,13 @@
     </div>
   <% end %>
 </div>
-<%= link_to "topページに戻る", root_path %>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+<div class="home">
+  <div class="icon">
+    <%= link_to image_tag("home-icon.png", width: '40', alt: "サンプル画像"), root_path %>
+    <br>home</br>
+  </div>
+  <div class="icon">
+    <%= link_to image_tag("icon_038490_256.png", width: '40', alt: "サンプル画像"), destroy_user_session_path, method: :delete, class: 'btn'%>
+    <br>ログアウト</br>
+  </div>
+</div>

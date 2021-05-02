@@ -106,3 +106,12 @@ li {
 .field_with_errors {
   display: contents;
 }
+
+.home {
+  display: flex;
+  font-size: 10px;
+}
+
+.icon {
+  margin: 30px;
+}

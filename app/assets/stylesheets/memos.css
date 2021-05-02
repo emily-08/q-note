@@ -1,4 +1,4 @@
-html { background-color: rgba(247, 227, 141, 0.836); }
+/* html { background-color: rgba(247, 227, 141, 0.836); } */
 
 .wrapper {
   display: flex;
@@ -10,6 +10,7 @@ html { background-color: rgba(247, 227, 141, 0.836); }
 .genre {
   width: 300px;
   background-color: #fad884bd;
+  /* background-color: #fffaf0; */
   min-height: 100vh;
 }
 
