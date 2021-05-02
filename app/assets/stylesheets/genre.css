@@ -110,8 +110,11 @@ li {
 .home {
   display: flex;
   font-size: 10px;
+  /* position: fixed; */
+  /* top: 10px; */
+  /* left: 20px; */
 }
 
 .icon {
-  margin: 30px;
+  margin: 20px;
 }
