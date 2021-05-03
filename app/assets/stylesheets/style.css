@@ -2,12 +2,9 @@
 html { height: 100%; }
 
 .contents {
-  /* position: relative; */
   min-height: 100vh;
   width: 100vw;
   background-size: cover;
-  /* background-size: contain; */
-  /* background-repeat: no-repeat; */
   background-position: 50% 40%;
   background-image: linear-gradient(90deg, rgba(241, 245, 244, 0.55), rgba(240, 245, 244, 0.8)) , url(jeshoots-com-pUAM5hPaCRI-unsplash.jpg);
   display: flex;
@@ -17,7 +14,6 @@ html { height: 100%; }
 
 .container {
   color: black;
-  /* position: absolute; */
   font-size: 30px;
   margin: auto 200px;
 }
@@ -37,7 +33,7 @@ h2 {
 }
 
 nobr {
- font-size: 20px;
+ font-size: 17px;
 }
 
 .logout {
@@ -45,22 +41,40 @@ nobr {
 }
 /* /* ユーザー(device) */
 
+/* ホーム、ログインボタン */
+.home {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  background-color: #ccc;
+  border: gray 1.5px solid;
+}
+
+.icon {
+  margin: 18px;
+  font-size: 14px;
+}
+/* ホーム、ログインボタン */
+
 /* メモ検索 */
 .search-form {
-  padding: 10px;
-  background-color: #ccc;
   font-size: 1.2rem;
   width: 300px;
-  height: 70px;
+  height: 100px;
   display: flex;
-  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  /* position: fixed; */
 }
 
 .search-input {
   width: 205px;
   height: 50px;
   padding: 0 10px;
-  border: none;
   margin-right: 7px;
 }
 
@@ -68,10 +82,8 @@ nobr {
   width: 50px;
   height: 50px;
   padding: 10px, 20px;
-  margin-left: 0;
-  border: none;
-  background-color: #4db4f0;
-  color: #fff;
+  background-color: #ccc;
+  font-size: 15px;
   cursor: pointer;
-  font-size: 14px;
 }
+/* メモ検索 */

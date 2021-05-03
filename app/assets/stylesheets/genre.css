@@ -101,23 +101,6 @@ li {
   display: contents;
 }
 
-.home {
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  background-color: #ccc;
-  position: fixed;
-  top: 0;
-  text-align: center;
-  border: gray 1.5px solid;
-  height: 100px;
-}
-
-.icon {
-  margin: 18px;
-  font-size: 14px;
-}
-
 .plus {
   text-align: center;
   margin: 20px 0;
@@ -131,7 +114,6 @@ li {
   overflow: scroll;
   padding: 0 20px;
   margin-top: 100px;
-  min-height: 120vh;
 }
 
 .genre-list-name {
