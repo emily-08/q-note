@@ -19,7 +19,6 @@ html { background-color: #fad884b2; }
 }
 
 .memos-space {
-  /* background-color: #EEE8AA; */
   /* height: 100vh; */
   overflow: scroll;
   display: flex;
