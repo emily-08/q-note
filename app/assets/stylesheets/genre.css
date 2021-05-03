@@ -120,6 +120,10 @@ li {
 
 .plus {
   text-align: center;
+  margin: 20px 0;
+  border: gray 2.5px solid;
+  padding: 3px 10px;
+  background-color:  #f5cf6fa4;
 }
 
 .genres-lists {
@@ -127,6 +131,7 @@ li {
   overflow: scroll;
   padding: 0 20px;
   margin-top: 100px;
+  min-height: 120vh;
 }
 
 .genre-list-name {

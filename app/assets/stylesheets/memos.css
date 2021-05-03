@@ -20,13 +20,12 @@ html { background-color: #fad884b2; }
 
 .memos-space {
   /* height: 100vh; */
-  overflow: scroll;
   display: flex;
   justify-content: space-between;
 }
 
 .memo-list {
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 }
 
 .upper-memo {
