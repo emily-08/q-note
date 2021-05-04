@@ -1,21 +1,28 @@
 <div class="memos-space">
-  <%# ジャンルのメモ一覧 %>
-  <div class="genre-box">
-    <span class="genre-label" ><%= @genre.name %></span>
-    <%= render partial: 'memo', collection: @memos %>
+  <div class="screen">
+    <%= form_with(url: search_genre_memos_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: "メモを検索", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
+    <% end %>
+    <div class="genre-box">
+      <span class="genre-label" ><%= @genre.name %></span>
+      <%= render partial: 'memo', collection: @memos %>
+    </div>
   </div>
   <%# ジャンルのメモ一覧 %>
   <%# メモの投稿 %>
-  <%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
-    <div class="form-input">
-      <p><%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %></p>
-      <p><%= f.text_area :text, class: 'form-text', placeholder: 'type a text' %></p>
-    </div>
+  <%= form_with model: [@genre, @memo], class: 'form-input', local: true do |f| %>
+    <%= f.label :メモ作成, class: 'memo-create'%>
+    <%= f.text_field :title, class: 'form-title', placeholder: ' title' %>
+    <%= f.text_area :text, class: 'form-text', placeholder: 'text' %>
+    <p class="momomo">
       <label class="form-image">
-        <span class="image-file">画像</span>
-        <%= f.file_field :image, class: 'hidden' %>
+        <%= image_tag 'icon_002650_64.png', :size => '55x60', class: 'image-file' %>
+        <span>画像</span>
+        <%= f.file_field :image, class: 'hidden'%>
       </label>
       <%= f.submit '保存', class: 'form-submit' %>
+    </p>
   <% end %>
   <%#// メモの投稿 %>
 </div>
