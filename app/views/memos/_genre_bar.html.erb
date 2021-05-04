@@ -1,3 +1,13 @@
+<div class="home">
+  <p class="icon" >
+    <%= link_to image_tag("home-icon.png", width: '25'), root_path %>
+    <br>home</br>
+  </p>
+  <p class="icon" >
+    <%= link_to image_tag("icon_038490_256.png", width: '25'), destroy_user_session_path, method: :delete %>
+    <br>Logout</br>
+  </p>
+</div>
 <div class="genres-lists">
   <div class="plus">
     <p><%= link_to image_tag("icon_001560_32.png", width: '20'), new_genre_path %></p>
