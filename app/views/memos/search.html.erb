@@ -1,5 +1,15 @@
 <div class='wrapper'>
   <div class='genre'>
+    <div class="home">
+      <p class="icon" >
+        <%= link_to image_tag("home-icon.png", width: '25'), root_path %>
+        <br>home</br>
+      </p>
+      <p class="icon" >
+        <%= link_to image_tag("icon_038490_256.png", width: '25'), destroy_user_session_path, method: :delete %>
+        <br>Logout</br>
+      </p>
+    </div>
     <%= render "memos/genre_bar" %>
   </div>
   <div class="memo">
@@ -10,7 +20,7 @@
       <% end %>
     </div>
     <div class="genre-box">
-      <span class="genre-label" >検索メモ一覧</span>
+      <span class="genre-label" >メモ検索結果</span>
       <% @memos.each do |memo| %>
         <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
       <% end %>
