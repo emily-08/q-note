@@ -87,19 +87,10 @@ li {
   width: 180px;
   margin: 0 30px 0 30px ;
 }
-.genrename-form__field {
-  box-sizing: border-box;
-}
 
-.chat-room-form__field:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.field_with_errors {
+/* .field_with_errors {
   display: contents;
-}
+} */
 
 .plus {
   text-align: center;
