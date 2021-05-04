@@ -24,8 +24,7 @@ li {
 }
 
 .genre-new {
-  border-bottom: black 0.5px solid;
-  height: 300px;
+  height: 170px;
   padding: 0 20px;
 }
 
@@ -43,7 +42,7 @@ li {
   background-color: rgb(168, 165, 165);
 }
 
-.chat-room-form {
+.genrename-form {
   width: 270px;
   height: 200px;
   margin: 20px auto 20px;
@@ -54,14 +53,15 @@ li {
   box-sizing: border-box;
 }
 
-.chat-room-form__errors {
+/* .chat-room-form__errors {
   margin: 30px 0;
   padding: 20px 40px;
   border: 1px solid #ddd;
   border-radius: 2px;
   text-align: center;
-}
-.chat-room-form__label {
+} */
+
+.genrename-form__label {
   display: block;
   line-height: 20px;
   font-weight: bold;
@@ -69,7 +69,7 @@ li {
   margin-bottom: 15px;
   color: rgb(107, 106, 106);
 }
-.chat-room-form__input {
+.genrename-form__input {
   float: left;
   width: 100%;
   line-height: 10px;
@@ -78,7 +78,7 @@ li {
   box-sizing: border-box;
 }
 
-.chat-room-form__action-btn {
+.genrename-form__action-btn {
   display: inline-block;
   padding: 12px 20px;
   color: #fff;
@@ -87,7 +87,7 @@ li {
   width: 180px;
   margin: 0 30px 0 30px ;
 }
-.chat-room-form__field {
+.genrename-form__field {
   box-sizing: border-box;
 }
 
