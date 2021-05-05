@@ -1,6 +1,5 @@
 <div class="memo-list">
-  <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
-  <%= link_to '削除', genre_memo_path(@genre, memo.id), method: :delete %>
-  <%= link_to '編集', edit_genre_memo_path(@genre, memo.id), method: :get %>
-  <%= link_to '詳細', genre_memo_path(@genre, memo.id), method: :get %>
+  <p class="memo-title"><%= memo.title %><%= l memo.created_at%><span><%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(@genre, memo.id), method: :get %></span><p>
+  <%= link_to image_tag("icon_065640_32.png", width: '20'), genre_memo_path(@genre.id, memo.id), method: :delete %>
+  <%= link_to image_tag("icon_000560_32.png", width: '20'), edit_genre_memo_path(@genre.id, memo.id), method: :get %>
 </div>

@@ -19,7 +19,7 @@
         <p><%= link_to genre.name, genre_memos_path(genre) %></p>
         <%# 削除 %>
         <%= link_to image_tag("icon_065640_32.png", width: '20'), genre_path(genre.id), method: :delete %>
-        <%# 詳細 %>
+        <%# 編集 %>
         <%= link_to image_tag("icon_000560_32.png", width: '20'), edit_genre_path(genre.id), method: :get %>
       </div>
     </div>
