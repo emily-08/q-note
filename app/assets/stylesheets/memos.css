@@ -112,13 +112,22 @@ html { background-color: #fad884b2; }
 }
 
 .genre-box {
+  width: calc(100vw - 300px - 50%);
   position: relative;
   margin: 2em 0;
   padding: 2.9em 18.0em 30em 0;
   border: solid 3px rgb(155, 153, 153);
 }
 
-.genre-box .genre-label {
+.genre-home-box {
+  width: calc(100vw - 300px);
+  position: relative;
+  margin: 2em 0;
+  padding: 2.9em 18.0em 30em 0;
+  border: solid 3px rgb(155, 153, 153);
+}
+
+.genre-box  .genre-label {
   position: absolute;
   display: inline-block;
   top: -27px;
@@ -133,7 +142,17 @@ html { background-color: #fad884b2; }
   border-radius: 5px 5px 0 0;
 }
 
-.box {
-  margin: 0; 
-  padding: 0;
+.genre-home-box .genre-label {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: rgb(155, 153, 153);
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
 }

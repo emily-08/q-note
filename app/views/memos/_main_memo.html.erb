@@ -1,13 +1,7 @@
 <div class="memos-space">
-  <div class="screen">
-    <%= form_with(url: search_genre_memos_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "メモを検索", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
-    <% end %>
-    <div class="genre-box">
-      <span class="genre-label" ><%= @genre.name %></span>
-      <%= render partial: 'memo', collection: @memos %>
-    </div>
+  <div class="genre-box">
+    <span class="genre-label" ><%= @genre.name %></span>
+    <%= render partial: 'memo', collection: @memos %>
   </div>
   <%# ジャンルのメモ一覧 %>
   <%# メモの投稿 %>
