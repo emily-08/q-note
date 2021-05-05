@@ -18,14 +18,12 @@
   </div>
   <%# 全てのメモ一覧 %>
   <div class="memo">
-    <div class="genre-box">
+    <div class="genre-home-box">
       <span class="genre-label" >メモ一覧</span>
       <div class="memo-list">
-        <div class="upper-memo">
         <% @memos.each do |memo| %>
-          <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
+          <p class="memo-title"><%= memo.title %><%= l memo.created_at%><%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(:genre_id, memo.id), method: :get %></p>
         <% end %>
-        </div>
       </div>
     </div>
   </div>

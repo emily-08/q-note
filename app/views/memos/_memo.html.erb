@@ -1,7 +1,5 @@
 <div class="memo-list">
-  <div class="upper-memo">
-    <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
-  </div>
+  <p class="memo-title"><%= memo.title %><%= l memo.created_at%><p>
   <%= link_to '削除', genre_memo_path(@genre, memo.id), method: :delete %>
   <%= link_to '編集', edit_genre_memo_path(@genre, memo.id), method: :get %>
   <%= link_to '詳細', genre_memo_path(@genre, memo.id), method: :get %>

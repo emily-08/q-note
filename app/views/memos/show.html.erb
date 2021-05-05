@@ -1,11 +1,9 @@
 <div class="memo-list">
-  <div class="upper-memo">
-    <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
-    <div>
-      <%= @memo.text%>
-    </div>
-    <div>
-      <%= image_tag @memo.image.variant(resize: '500x500'), class: 'memo-image' if @memo.image.attached? %>
-    </div>
+  <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
+  <div>
+    <%= @memo.text%>
+  </div>
+  <div>
+    <%= image_tag @memo.image.variant(resize: '500x500'), class: 'memo-image' if @memo.image.attached? %>
   </div>
 </div>

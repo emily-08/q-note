@@ -6,9 +6,7 @@
     <div class="memos-space">
         <span class="genre-label" ><%= @genre.name %></span>
         <div class="memo-list">
-          <div class="upper-memo">
-            <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
-          </div>
+          <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
         </div>
       <%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
         <div class="form-input">
