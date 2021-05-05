@@ -4,22 +4,29 @@
   </div>
   <div class="memo">
     <div class="memos-space">
-        <span class="genre-label" ><%= @genre.name %></span>
-        <div class="memo-list">
-          <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
+      <div class="memo-list">
+        <p>ジェンル名:<span class="memo-genre-name"><%= @genre.name %></span></p>
+        <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
+        <div>
+          <%= @memo.text%>
         </div>
-      <%= form_with model: [@genre, @memo], class: 'form', local: true do |f| %>
-        <div class="form-input">
-        <h3>編集</h3>
-          <p><%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %></p>
-          <p><%= f.text_area :text, class: 'form-text', placeholder: 'type a text' %></p>
+        <div>
+          <%= image_tag @memo.image.variant(resize: '500x500'), class: 'memo-image' if @memo.image.attached? %>
         </div>
-        <label class="form-image">
-            <span class="image-file">画像</span>
-            <%= f.file_field :image, class: 'hidden' %>
-        </label>
+      </div>
+      <%= form_with model: [@genre, @memo], class: 'form-input', local: true do |f| %>
+        <%= f.label :編集, class: 'memo-create'%>
+        <%= f.text_field :title, class: 'form-title', placeholder: ' title' %>
+        <%= f.text_area :text, class: 'form-text', placeholder: 'text' %>
+        <p class="momomo">
+          <label class="form-image">
+            <%= image_tag 'icon_002650_64.png', :size => '55x60', class: 'image-file' %>
+            <span>画像</span>
+            <%= f.file_field :image, class: 'hidden'%>
+          </label>
           <%= f.submit '保存', class: 'form-submit' %>
+        </p>
       <% end %>
-    </div>  
+    </div>
   </div>
 </div>

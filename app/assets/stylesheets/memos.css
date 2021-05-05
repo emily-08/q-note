@@ -27,6 +27,10 @@ html { background-color: #fad884b2; }
   display: block;
 }
 
+.memo-genre-name {
+  font-size: 30px;
+}
+
 .memo-list {
   margin: 18px 5px;
   display: block;
