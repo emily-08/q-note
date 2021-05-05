@@ -9,11 +9,11 @@
       <%= form.submit "検索", class: "search-btn" %>
     <% end %>
     <div class="genre-home-box">
-      <span class="genre-label" >メモ一覧</span>
+      <span class="genre-label" ><%= image_tag("home-icon.png", width: '22')%>メモ全一覧</span>
       <div class="memo-list">
         <div class="upper-memo">
           <% @memos.each do |memo| %>
-            <p class="memo-title"><%= memo.title %><%= l memo.created_at%><%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(@genre, memo.id), method: :get %><p>
+            <p class="memo-title"><%= memo.title %><%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(@genre, memo.id), method: :get %><p>
           <% end %>
         </div>
       </div>
