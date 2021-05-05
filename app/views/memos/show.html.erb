@@ -1,9 +1,22 @@
-<div class="memo-list">
-  <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
-  <div>
-    <%= @memo.text%>
+<div class="wrapper">
+  <div class="genre">
+   <%= render "genre_bar" %>
   </div>
-  <div>
-    <%= image_tag @memo.image.variant(resize: '500x500'), class: 'memo-image' if @memo.image.attached? %>
+  <div class="memo">
+    <div class="memos-space">
+      <div class="memo-list">
+        <p>ジェンル名:<span class="memo-genre-name"><%= @genre.name %></span>
+          <%= link_to image_tag("icon_065640_32.png", width: '40'), genre_memo_path(@genre.id, @memo.id), method: :delete %>
+          <%= link_to image_tag("icon_000560_32.png", width: '40'), edit_genre_memo_path(@genre.id, @memo.id), method: :get %>
+        </p>
+        <p class="memo-title"><%= @memo.title %><%= l @memo.created_at%><p>
+        <div>
+          <%= @memo.text%>
+        </div>
+        <div>
+          <%= image_tag @memo.image.variant(resize: '500x500'), class: 'memo-image' if @memo.image.attached? %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

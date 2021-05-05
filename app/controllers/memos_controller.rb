@@ -38,6 +38,8 @@ class MemosController < ApplicationController
 
   def show
     @memo = Memo.find(params[:id])
+    @genre = Genre.new
+    @genre = Genre.find(params[:genre_id])
   end
 
   def search
