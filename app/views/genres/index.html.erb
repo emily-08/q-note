@@ -12,7 +12,9 @@
       <span class="genre-label" ><%= image_tag("home-icon.png", width: '22')%>メモ全一覧</span>
       <div class="memo-list">
         <% @memos.each do |memo| %>
-          <p class="memo-title"><%= memo.title %><%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(@genre, memo.id), method: :get %><p>
+          <p class="memo-title"><%= memo.title %>
+          <%# <%= link_to image_tag("icon_059830_32.png", width: '20'), genre_memo_path(@genre, memo.id), method: :get %>
+          </p>
         <% end %>
       </div>
     </div>
